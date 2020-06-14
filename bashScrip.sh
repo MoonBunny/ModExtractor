@@ -5,7 +5,7 @@ if [ $(ps ax | grep [s]sh-agent | wc -l) -gt 0 ] ; then
 else
     eval $(ssh-agent -s)
     if [ "$(ssh-add -l)" == "The agent has no identities." ] ; then
-        ssh-add /home/kory/projects/ModExtractor/.ssh/id_rsa
+        ssh-add /home/kory/.ssh/id_rsa
     fi
 
     # Don't leave extra agents around: kill it on exit. You may not want this part.
