@@ -34,4 +34,4 @@ except Exception as e:
 
 print("out of stock")
 driver.quit()
-sys.exit(0)
+sys.exit(-1)
