@@ -1,3 +1,4 @@
+import sys
 import time
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
@@ -24,11 +25,13 @@ try:
       option.click()
       break
 
-  #time.sleep(5)
+  time.sleep(3)
   in_stock_element = driver.find_element_by_class_name('out-of-stock')
 except Exception as e:
   print("item is stocked???")
   print(e)
+  sys.exit(-1)
 
 print("out of stock")
 driver.quit()
+sys.exit(0)
